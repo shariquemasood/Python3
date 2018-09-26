@@ -1,0 +1,97 @@
+1.def match(strings):
+  cont = 0
+  for string in strings:
+    if len(string) >= 2 and string[0] == string[-1]:
+      cont +=1
+  print (cont)
+
+match(['abc', 'ded', 'xyx', 'mno'])
+
+
+2. def sorting(strings):
+   list1 = []
+   list2 = []
+   for string in strings:
+       if string.startswith('x'):
+          list1.append(string)
+       else:
+          list2.append(string)
+   print (sorted(list1) + sorted(list2))
+
+sorting(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
+
+3.def pal(s):
+    counter = {}
+    for c in s:
+        counter[c] = counter.get(c, 0) + 1
+    odd_count = 0
+    for count in counter.values():
+        odd_count += count % 2
+    return odd_count in [0, 1]
+
+print(pal("motor"))
+~                                                                                                                                              
+~                                                                                                                                              
+~                                                                                                                                              
+~ 
+                    
+4. def StToList(strings):
+        oldList = list(strings.split(" "))
+        newList = [''.join(a).split(" ") for a in oldList]
+        print (newList)
+
+
+StToList("ABC DEF GHI")  
+
+or 
+
+def StToList(strings):
+        final_data = [b for b in [i.split(' ') for i in strings.split('\n')] if b[0]]
+        print (final_data)
+
+StToList("""A B C
+D E F
+G H I""")
+     
+
+
+5. def common(a,b):
+        c = set(a) & set(b)
+        d=list(c)
+        print (d)
+
+common([1,2,3,1,4,5],[1,2,7,78,324,3,9])
+
+6. def wordCount(words):
+        wc={}
+        for word in words:
+                if word not in wc:
+                        wc[word]=1
+                else:
+                        wc[word]+=1;
+        for key,value in wc.items():
+                print (key, value)
+	maximum = max(wc, key=wc.get)
+        print ("Highest Word count is",maximum, wc[maximum])
+
+wordCount(["apple","banana","apple"])
+
+
+or 
+
+with open('/home/sharique/Python3/SampleTextFile.txt', 'r') as f:
+        s = f.read()
+        wc={}
+        for word in s.split():
+                if word not in wc:
+                        wc[word]=1
+                else:
+                        wc[word]+=1;
+        for key,value in wc.items():
+                print (key, value)
+        maximum = max(wc, key=wc.get)
+        print ("Highest Word count is",maximum, wc[maximum])
+
+
+
+                      
